@@ -8,7 +8,7 @@ interface FormInputProps<T extends Record<string, any>> {
   errors: FieldErrors<T>;
 }
 
-function Forminput<T extends Record<string, any>>(props: FormInputProps<T>) {
+function FormInput<T extends Record<string, any>>(props: FormInputProps<T>) {
   return (
     <div className="form-group mb-4">
       <input
@@ -34,4 +34,4 @@ function Forminput<T extends Record<string, any>>(props: FormInputProps<T>) {
   );
 }
 
-export default Forminput;
+export default FormInput;
