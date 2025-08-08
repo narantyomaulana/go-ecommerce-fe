@@ -1,14 +1,25 @@
-import Navbar from '../../components/Navbar/Navbar';
-import { Outlet } from 'react-router-dom';
+import Navbar from "../../components/Navbar/Navbar";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useAuthStore } from "../../store/auth";
+import { useEffect } from "react";
 
 function AuthLayout() {
-    return (
-        <>
-            <Navbar />
+  const isLoggedIn = useAuthStore((state) => state.isLoggedIn);
+  const navigate = useNavigate();
 
-            <Outlet />
-        </>
-    );
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate("/");
+    }
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+
+      <Outlet />
+    </>
+  );
 }
 
 export default AuthLayout;
