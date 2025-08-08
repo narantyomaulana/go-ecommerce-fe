@@ -7,7 +7,7 @@ function Navbar() {
         <nav className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
             <div className="container">
                 <Link className="navbar-brand" to="/">
-                    Furni<span>.</span>
+                    Havenwood<span>.</span>
                 </Link>
 
                 <button

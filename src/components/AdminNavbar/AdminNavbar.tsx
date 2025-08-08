@@ -5,7 +5,7 @@ function AdminNavbar() {
         <nav className="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Admin navigation bar">
             <div className="container">
                 <Link className="navbar-brand" to="/admin">
-                    Furni<span>.</span> Admin
+                    Havenwood<span>.</span> Admin
                 </Link>
 
                 <div className="d-flex align-items-center">
