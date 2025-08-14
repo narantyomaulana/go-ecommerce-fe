@@ -14,6 +14,7 @@ interface AuthStoreState {
   jwtPayload: JwtPlayload | null;
   role: "customer" | "admin";
   login: (token: string) => void;
+  logout: () => void;
 }
 
 export const useAuthStore = create<AuthStoreState>((set) => ({
@@ -35,5 +36,14 @@ export const useAuthStore = create<AuthStoreState>((set) => ({
           ...state,
         };
       }
+    }),
+  logout: () =>
+    set(state => {
+      return {
+        ...state,
+        isLoggedIn: false,
+        jwtPayload: null,
+        role: "customer",
+      };
     }),
 }));
